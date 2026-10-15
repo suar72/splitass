@@ -35,54 +35,76 @@ footer a { color: var(--muted); }
 <body>
 <main>
   <h1 class="page">SplitAss Privacy Policy</h1>
-  <p class="date">Effective 14 October 2026</p>
+  <p class="date">Effective 15 October 2026</p>
   <section>
   <p>SplitAss helps you split bills. It is built to keep your information on your device.</p>
 
   <h2>What stays on your device</h2>
-  <p>Receipts, items, the people you split with, groups, and saved receipt photos are stored only on your device. SplitAss has no account and no server of its own, and it doesn't sync them anywhere.</p>
+
+  <p>Receipts, items, the people you split with, groups, and saved receipt photos are stored only on your device. They aren't synced or uploaded anywhere.</p>
 
   <h2>When a receipt leaves your device</h2>
+
   <p>Only when you scan a receipt with a cloud model. You choose the model in Settings › AI Model:</p>
+
   <ul>
     <li><strong>On-Device (Apple Intelligence):</strong> the receipt is read on your device. Nothing is sent.</li>
-    <li><strong>Gemini</strong> (Google) or <strong>OpenAI:</strong> depending on Settings › Processing, either the receipt photo or the text recognized from it on your device is sent to that provider so it can read the items, prices and charges. The result comes back to the app. Nothing else is sent: no name, contacts, location or other receipts.</li>
-  </ul>
-  <p>How those providers handle what they receive is covered by their own policies:</p>
-  <ul>
-    <li>Google: <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a></li>
-    <li>OpenAI: <a href="https://openai.com/policies/privacy-policy">Privacy Policy</a></li>
+    <li><strong>Cloud:</strong> depending on Settings › Processing, either the receipt photo or the text recognized from it on your device is sent through SplitAss's server to OpenAI, which reads the items, prices and charges. The result comes back to the app; the receipt isn't stored. Nothing else is sent: no name, contacts, location or other receipts.</li>
   </ul>
 
+  <p>How OpenAI handles what it receives is covered by its own <a href="https://openai.com/policies/privacy-policy">privacy policy</a>.</p>
+
+  <h2>Credits and purchases</h2>
+
+  <p>Cloud scans use credits; on-device scans and typing items in are free. To keep your balance and check your purchases, SplitAss's server stores:</p>
+
+  <ul>
+    <li>a random ID created by the app — not your name, email or Apple Account — with your credit balance;</li>
+    <li>a record of each credit pack you buy: Apple's transaction ID, the pack, when it was bought, and whether it was refunded;</li>
+    <li>a record of each cloud scan: text or image, the credits it used, whether it worked, and when. Never the receipt itself.</li>
+  </ul>
+
+  <p>Purchases are made through the App Store, so SplitAss never sees your payment details. The server checks each purchase with Apple, and Apple tells it about refunds. The app also uses Apple's App Attest and DeviceCheck to confirm that requests come from the genuine app and that a device gets its free starter credits only once; neither identifies you.</p>
+
+  <p>This information is used only to run credits. It isn't used for advertising, and it's shared only with Apple, to check purchases.</p>
+
   <h2>What SplitAss doesn't do</h2>
+
   <ul>
     <li>No advertising, analytics or tracking</li>
     <li>No account or sign-in</li>
-    <li>No selling or sharing of your information</li>
+    <li>No selling of your information</li>
   </ul>
 
   <h2>Permissions</h2>
+
   <ul>
     <li><strong>Camera:</strong> to photograph a receipt. Only when you choose to.</li>
     <li><strong>Photos:</strong> to pick a receipt photo, and to save shared images if you ask.</li>
   </ul>
+
   <p>You can change these at any time in your device's Settings.</p>
 
   <h2>Deleting your information</h2>
+
   <ul>
     <li>Delete a receipt or group in the app (each delete can be undone briefly).</li>
     <li>To remove saved receipt photos, turn off Settings › Keep Scanned Photos, then choose Remove Saved Photos.</li>
     <li>Settings › Delete All Receipts removes everything.</li>
     <li>Deleting the app removes all of its data from your device.</li>
+    <li>To have your credit records removed from the server, contact us. This also removes any credits you have left.</li>
   </ul>
 
   <h2>Children</h2>
+
   <p>SplitAss is not aimed at children and doesn't knowingly collect information from anyone.</p>
 
   <h2>Changes</h2>
+
   <p>If this policy changes, the new version will be posted here with a new effective date.</p>
 
   <h2>Contact</h2>
+
   <p><a href="mailto:chirayoots@gmail.com">chirayoots@gmail.com</a></p>
   </section>
   <footer><a href="index.html">SplitAss Support</a></footer>
