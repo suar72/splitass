@@ -20,3 +20,33 @@
 .icon-stage{filter:drop-shadow(0 10px 14px #00000015)}
 .icon-stage canvas,.icon-stage .fallback{filter:none}
 .icon-stage canvas{-webkit-mask-image:url("assets/icon-base-light.png");mask-image:url("assets/icon-base-light.png");-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;mask-mode:alpha}
+
+/* Size pinned chapters to the viewport beneath navigation, not a fixed minimum. */
+.journey{--story-header:64px}
+@media(max-width:740px){.journey{--story-header:58px}}
+@media(prefers-reduced-motion:no-preference){
+ .journey-sticky{top:var(--story-header);height:calc(100svh - var(--story-header));min-height:0}
+ .journey-layout{height:100%;padding:24px 0 70px}
+ .screens-scene{height:100%;min-height:0}
+ .app-shot{width:min(280px,calc((100svh - 189px)/2.174))}
+ .chapter h3{font-size:clamp(36px,6.5svh,65px)}
+}
+@media(prefers-reduced-motion:no-preference) and (max-width:740px){
+ .journey-layout{display:grid;grid-template-columns:1fr;grid-template-rows:170px minmax(0,1fr);gap:0;padding:20px 0 55px}
+ .journey-copy{height:170px}
+ .chapter h3{font-size:34px}
+ .app-shot{width:min(222px,calc((100svh - 343px)/2.174))}
+}
+/* Below a comfortable reading height, each chapter gets its own natural space. */
+@media(max-height:540px),(max-width:740px) and (max-height:740px){
+ .journey{height:auto;min-height:0}
+ .journey-sticky{position:relative;top:auto;height:auto;min-height:0;padding:60px 0 30px;overflow:clip}
+ .journey-layout{display:flex;flex-direction:column;gap:20px;height:auto;padding:0}
+ .journey-copy,.screens-scene{display:contents}
+ .chapter{position:static;opacity:1!important;transform:none!important;will-change:auto;text-align:center;margin:0;display:block}
+ .chapter h3{font-size:36px;margin-bottom:18px}
+ .chapter .body-copy{font-size:16px}
+ .app-shot{position:static;width:min(280px,70vw);margin:15px auto 75px;opacity:1!important;transform:none!important;will-change:auto}
+ .chapter-index,.journey-progress,.story-word{display:none}
+ .journey-atmosphere{transform:none!important}
+}
