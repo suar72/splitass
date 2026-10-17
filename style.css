@@ -14,3 +14,9 @@
 @media(prefers-reduced-motion:reduce){.journey{height:auto;min-height:0}.journey-sticky{height:auto;min-height:0;padding:80px 0;position:relative}.journey-layout{display:flex;flex-direction:column;gap:25px;padding:0}.journey-copy{height:auto;display:contents}.chapter{position:static;opacity:1!important;transform:none!important;will-change:auto;text-align:center;margin:0 0 15px}.screens-scene{display:contents}.app-shot{position:static;transform:none!important;opacity:1!important;will-change:auto;margin:0 auto 50px}.chapter-index,.journey-progress,.story-word{display:none}.journey-copy,.journey-atmosphere{transform:none!important}.hero-content [data-drift]{transform:none!important}}
 
 @media(prefers-color-scheme:dark){.journey{background:#151519;color:#f5f5f7}.chapter .eyebrow,.chapter .body-copy,.app-shot figcaption{color:#aaaab5}.chapter-index{color:#777782}.chapter-index .active{color:#f5f5f7}.journey-progress{background:#34343e}.journey-progress span{background:#a1a1af}.journey-atmosphere{background:radial-gradient(ellipse at 76% 55%,#34324b,transparent 53%)}.story-word{color:#bdbde00a}}
+
+/* Clip all optical highlights to the icon's exact alpha contour. Keep only the
+   intentional drop shadow outside that contour, on the containing stage. */
+.icon-stage{filter:drop-shadow(0 10px 14px #00000015)}
+.icon-stage canvas,.icon-stage .fallback{filter:none}
+.icon-stage canvas{-webkit-mask-image:url("assets/icon-base-light.png");mask-image:url("assets/icon-base-light.png");-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;mask-mode:alpha}
