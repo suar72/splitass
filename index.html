@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SplitAss Support</title>
-<meta name="description" content="Your assistant for splitting the bill. Help with scanning receipts, splitting items, credits and settling up in SplitAss."><link rel="icon" href="data:,">
+<title>SplitAss — Features & Support</title>
+<meta name="description" content="Your assistant for splitting the bill. Explore scanning, splitting, settling and sharing, plus help with SplitAss."><link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="features.css">
 </head><body>
-<header><nav><a class="wordmark" href="#">SplitAss <span>Support</span></a><div class="nav-right"><a href="#help">Quick help</a><a class="nav-contact" href="mailto:chirayoots@gmail.com">Contact us ↗</a></div></nav></header>
+<header><nav><a class="wordmark" href="#">SplitAss <span>Support</span></a><div class="nav-right"><a href="#features">Features</a><a href="#help">Quick help</a><a class="nav-contact" href="mailto:chirayoots@gmail.com">Contact us ↗</a></div></nav></header>
 <main>
 <section class="hero">
 <div class="hero-atmosphere" data-depth="-100" aria-hidden="true"><div data-drift></div></div>
@@ -34,6 +35,68 @@
 </div></div><div class="journey-progress" aria-hidden="true"><span></span></div><div class="chapter-index" aria-hidden="true"><span>Split</span><span>Check</span><span>Settle</span></div>
 </div>
 </section>
+<section class="features" id="features" aria-labelledby="features-title">
+  <div class="features-heading"><p class="eyebrow">Features</p><h2 id="features-title">A little help.<br>All the way to settled.</h2><p>From the first scan to the last share. Take a closer look.</p></div>
+  <div class="feature-explorer">
+    <div class="feature-tabs" aria-label="Explore features">
+      <button type="button" id="feature-scan-tab" data-feature="scan"><span class="feature-number">01</span><span>Read the receipt<small>Paper, meet digital.</small></span><span class="feature-arrow" aria-hidden="true">↗</span></button>
+      <button type="button" id="feature-split-tab" data-feature="split"><span class="feature-number">02</span><span>Make it everyone’s<small>Share it your way.</small></span><span class="feature-arrow" aria-hidden="true">↗</span></button>
+      <button type="button" id="feature-settle-tab" data-feature="settle"><span class="feature-number">03</span><span>Settle the whole trip<small>Less back and forth.</small></span><span class="feature-arrow" aria-hidden="true">↗</span></button>
+      <button type="button" id="feature-share-tab" data-feature="share"><span class="feature-number">04</span><span>Send a clear picture<small>A share worth sharing.</small></span><span class="feature-arrow" aria-hidden="true">↗</span></button>
+    </div>
+    <div class="feature-panels">
+      <article class="feature-panel" id="feature-scan">
+        <div class="feature-stage scan-stage">
+          <div class="scan-destination" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 18a5 5 0 0 1-1-9.9 6 6 0 0 1 11.5-1A5.5 5.5 0 0 1 18 18Z"/></svg> Cloud <span>or on-device</span></div>
+          <div class="scan-paper">
+            <div class="scan-print"><strong>Riverside Kitchen</strong><span class="receipt-date">Table 6 · Bangkok</span><div class="receipt-rule"></div>
+              <div class="receipt-row" style="--line:0"><span>Pad Thai</span><span>฿120.00</span></div><div class="receipt-row" style="--line:1"><span>Green Curry</span><span>฿180.00</span></div><div class="receipt-row" style="--line:2"><span>Som Tum</span><span>฿90.00</span></div><div class="receipt-row" style="--line:3"><span>Mango Sticky Rice</span><span>฿120.00</span></div><div class="receipt-row" style="--line:4"><span>Thai Iced Tea × 3</span><span>฿150.00</span></div>
+              <div class="receipt-rule"></div><div class="receipt-row receipt-small"><span>Service charge 10%</span><span>฿66.00</span></div><div class="receipt-row receipt-small"><span>VAT 7%</span><span>฿50.82</span></div><div class="receipt-row receipt-total"><strong>Total</strong><strong>฿776.82</strong></div>
+            </div><div class="web-scan-beam" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+          <div class="scan-status" aria-hidden="true"><span class="scan-reading">Reading the details…</span><span class="scan-ready">✓ Ready to split</span></div>
+        </div>
+        <div class="feature-caption"><h3>A receipt. A head start.</h3><p>Scan a photo, review the details, then split. Choose Cloud, free on-device reading on supported devices, or enter items yourself.</p></div>
+      </article>
+      <article class="feature-panel" id="feature-split">
+        <div class="feature-stage split-stage">
+          <div class="web-sheet">
+            <span class="sheet-grip" aria-hidden="true"></span><div class="web-sheet-heading"><h4>Mango Sticky Rice</h4><p>Quantity 1 · ฿120.00</p></div>
+            <div class="split-methods" aria-label="Example split method"><span>Equal</span><span>Percent</span><span>Amount</span><span>Qty</span></div>
+            <p class="split-hint" data-split-status>Split equally between 3</p>
+            <div class="demo-member-list">
+              <button type="button" class="demo-person anna" disabled aria-pressed="true" data-person="Anna"><span>Anna</span><span class="demo-share">฿40.00</span><span class="demo-check" aria-hidden="true">✓</span></button>
+              <button type="button" class="demo-person ben" disabled aria-pressed="true" data-person="Ben"><span>Ben</span><span class="demo-share">฿40.00</span><span class="demo-check" aria-hidden="true">✓</span></button>
+              <button type="button" class="demo-person chloe" disabled aria-pressed="true" data-person="Chloe"><span>Chloe</span><span class="demo-share">฿40.00</span><span class="demo-check" aria-hidden="true">✓</span></button>
+            </div>
+            <p class="feature-try script-only" hidden>Tap a name to try it.</p><p class="sr-only" data-split-announcement role="status"></p>
+          </div>
+        </div>
+        <div class="feature-caption"><h3>One item. Any combination.</h3><p>Choose who shared what. Split equally, by percent, by amount or by quantity—even differently for each item. Charges and discounts follow each share.</p></div>
+      </article>
+      <article class="feature-panel" id="feature-settle">
+        <div class="feature-stage settle-stage">
+          <div class="trip-stack" aria-hidden="true"><div></div><div></div></div>
+          <div class="trip-card"><p class="mini-eyebrow">A group of receipts</p><h4>Bangkok weekend</h4><div class="trip-total"><span>3 receipts</span><strong>฿1,800.00</strong></div><div class="trip-paid"><span class="mini-pill anna">Anna paid ฿1,500</span><span class="mini-pill ben">Ben paid ฿300</span></div><div class="receipt-rule"></div><div class="settlement-title"><span>Settle up</span><span>2 transfers</span></div>
+            <div class="transfer" style="--transfer:0"><span class="mini-pill ben">Ben</span><span class="transfer-track" aria-hidden="true"><i></i>→</span><span class="mini-pill anna">Anna</span><strong>฿300.00</strong></div>
+            <div class="transfer" style="--transfer:1"><span class="mini-pill chloe">Chloe</span><span class="transfer-track" aria-hidden="true"><i></i>→</span><span class="mini-pill anna">Anna</span><strong>฿600.00</strong></div>
+            <p class="trip-note">Everyone’s share: ฿600.00</p>
+          </div>
+        </div>
+        <div class="feature-caption"><h3>More memories. Fewer transfers.</h3><p>Keep a trip’s receipts in a group. SplitAss brings the balances together and works out who pays whom across the whole trip.</p></div>
+      </article>
+      <article class="feature-panel" id="feature-share">
+        <div class="feature-stage share-stage">
+          <div class="share-preview" data-share-style="light"><p class="mini-eyebrow">The split</p><h4>Riverside Kitchen</h4><div class="share-total"><span>Bill total</span><strong>฿776.82</strong></div><div class="receipt-rule"></div><div class="receipt-row"><span class="share-name anna">Anna</span><span>฿258.94</span></div><div class="receipt-row"><span class="share-name ben">Ben</span><span>฿258.94</span></div><div class="receipt-row"><span class="share-name chloe">Chloe</span><span>฿258.94</span></div><p class="share-signoff">A fair share, for everyone.</p></div>
+          <div class="share-style-picker script-only" hidden role="group" aria-label="Shared image appearance"><button type="button" data-style="light" aria-pressed="true">Light</button><button type="button" data-style="dark" aria-pressed="false">Dark</button><button type="button" data-style="analog" aria-pressed="false">Analog</button></div>
+        </div>
+        <div class="feature-caption"><h3>The numbers, beautifully explained.</h3><p>Share the bill, a person’s items or the whole summary as an image. Choose Light, Dark or Analog for a picture that feels like a printed receipt.</p></div>
+      </article>
+    </div>
+  </div>
+  <div class="features-footer"><p>Illustrative previews. Your receipts stay in the app.</p><button type="button" class="feature-playback script-only" hidden>Pause previews <span aria-hidden="true">Ⅱ</span></button></div>
+</section>
+
 <section class="reassurance">
 <div class="reassurance-orbit" data-depth="-85" aria-hidden="true"><div data-drift></div></div>
 <div class="reassurance-content"><p class="eyebrow">Yours, from the start.</p><div data-depth="55"><h2 data-drift>Your bill.<br>Your business.</h2></div><div data-depth="25"><div data-drift><p>Your receipts stay on your device.<br>No account. No receipt syncing.<br>Just one less thing to think about.</p><a class="inline-link" href="privacy.html">Explore your privacy <span>↗</span></a></div></div></div>
@@ -47,5 +110,6 @@
 </div></section>
 <section class="contact-section"><div data-depth="25"><div data-drift><p class="eyebrow">Always happy to help.</p><h2>Let’s work it out.</h2><p>Questions, a tricky receipt, or an idea?<br>There’s a person on the other end.</p><a class="button" href="mailto:chirayoots@gmail.com">Get in touch <span>↗</span></a></div></div></section>
 </main><footer><span>© 2026 Chirayoot Sontha</span><span>SplitAss. Your assistant for splitting the bill.</span><a href="privacy.html">Privacy policy ↗</a></footer>
+<script src="features.js"></script>
 <script src="page-motion.js"></script><script src="icon.js"></script>
 </body></html>
